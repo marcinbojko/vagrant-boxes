@@ -8,7 +8,8 @@
     - [Windows](#windows)
   - [Boxes available in Vagrant Cloud](#boxes-available-in-vagrant-cloud)
   - [Linux boxes](#linux-boxes)
-    - [Alma Linux](#alma-linux)
+  - [CentOS 7](#centos-7)
+    - [Alma Linux 8](#alma-linux-8)
   - [Windows boxes](#windows-boxes)
   - [ToDo](#todo)
 
@@ -47,7 +48,13 @@ vagrant:vagrant
 
 ## Linux boxes
 
-### Alma Linux
+## CentOS 7
+
+|name|version|
+|----|-------|
+|centos7|7.9.3|
+
+### Alma Linux 8
 
 |name|version|
 |----|-------|
