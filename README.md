@@ -12,6 +12,9 @@
     - [Alma Linux 8](#alma-linux-8)
     - [Rocky Linux 8](#rocky-linux-8)
   - [Windows boxes](#windows-boxes)
+    - [Windows Server 2019 Standard](#windows-server-2019-standard)
+    - [Windows Server 2019 Datacenter](#windows-server-2019-datacenter)
+    - [Windows Server 2022 Standard](#windows-server-2022-standard)
   - [ToDo](#todo)
 
 <!-- /TOC -->
@@ -70,6 +73,24 @@ vagrant:vagrant
 |rockylinux8|8.5.0|
 
 ## Windows boxes
+
+### Windows Server 2019 Standard
+
+|name|version/box|
+|----|-------|
+|win2019std|1.1.0|
+
+### Windows Server 2019 Datacenter
+
+|name|version/box|
+|----|-------|
+|win2019std|1.4.0|
+
+### Windows Server 2022 Standard
+
+|name|version/box|
+|----|-------|
+|win2022std|1.1.0|
 
 ## ToDo
 
