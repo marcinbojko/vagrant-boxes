@@ -1,0 +1,32 @@
+VM_NAMEALP = [*('A'..'Z')].sample(2).join.downcase
+VM_NUMBER= [*('1'..'9')].sample(4).join
+VM_NAME= "#{VM_NAMEALP}"+"#{VM_NUMBER}"
+VM_DOMAIN = "test.lan"
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "marcinbojko/w2k16-trial"
+  config.vm.network "forwarded_port", guest: 3389, host: 3390
+  config.vm.hostname = "vagrant-#{VM_NAME}"
+  config.vm.boot_timeout = 240
+  config.winrm.timeout = 180
+  config.winrm.retry_limit = 10
+  config.winrm.retry_delay = 30
+  config.vm.provider :virtualbox do |vb, override|
+    vb.gui = true
+    vb.customize ["modifyvm", :id, "--memory", 2048]
+    vb.customize ["modifyvm", :id, "--cpus", 2]
+    vb.customize ["modifyvm", :id, "--vram", 128]
+    vb.customize ["setextradata", "global", "GUI/SuppressMessages", "all" ]
+    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    vb.customize ["modifyvm", :id, "--audio", "none"]
+    # Clipboard enabled
+    vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+    vb.customize ["modifyvm", :id, "--draganddrop", "hosttoguest"]
+    vb.name = "vagrant-#{VM_NAME}.#{VM_DOMAIN}"
+    # Performance gain
+    vb.linked_clone = true if Vagrant::VERSION >= '1.8.0'
+  end
+  config.vm.provision :shell, :path => "../scripts/windows/placeholder.ps1"
+  config.vm.provision :shell, :path => "../scripts/windows/change_dpi.ps1"
+  config.vm.provision :reload
+end

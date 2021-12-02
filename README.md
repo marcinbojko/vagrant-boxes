@@ -3,6 +3,7 @@
 
 - [vagrant-boxes](#vagrant-boxes)
   - [Vagrant required plugins](#vagrant-required-plugins)
+  - [Default providers](#default-providers)
   - [Default credentials](#default-credentials)
     - [Linux](#linux)
     - [Windows](#windows)
@@ -12,14 +13,16 @@
     - [Alma Linux 8](#alma-linux-8)
     - [Rocky Linux 8](#rocky-linux-8)
   - [Windows boxes](#windows-boxes)
+    - [Windows Server 2016 Standard](#windows-server-2016-standard)
     - [Windows Server 2019 Standard](#windows-server-2019-standard)
     - [Windows Server 2019 Datacenter](#windows-server-2019-datacenter)
     - [Windows Server 2022 Standard](#windows-server-2022-standard)
+    - [Windows Server 2022 Datacenter](#windows-server-2022-datacenter)
   - [ToDo](#todo)
 
 <!-- /TOC -->
 
-Set of Vagrant Boxes for different OS
+Set of Vagrant Boxes for different OS'es
 
 ## Vagrant required plugins
 
@@ -27,6 +30,11 @@ Set of Vagrant Boxes for different OS
 vagrant plugin install sahara
 vagrant plugin install vagrant-reload
 ```
+
+## Default providers
+
+- Virtualbox
+- Hyper-V (2016/2019)
 
 ## Default credentials
 
@@ -74,6 +82,12 @@ vagrant:vagrant
 
 ## Windows boxes
 
+### Windows Server 2016 Standard
+
+|name|version/box|
+|----|-------|
+|win2016std|1.4.9|
+
 ### Windows Server 2019 Standard
 
 |name|version/box|
@@ -92,7 +106,13 @@ vagrant:vagrant
 |----|-------|
 |win2022std|1.1.0|
 
+### Windows Server 2022 Datacenter
+
+|name|version/box|
+|----|-------|
+|win2022dc|1.0.0|
+
 ## ToDo
 
-Add more boxes from a list
-Add more scripts from a list
+- Add more boxes from a list
+- Add more scripts from a list
