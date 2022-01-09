@@ -12,6 +12,7 @@
     - [CentOS 7](#centos-7)
     - [Alma Linux 8](#alma-linux-8)
     - [Rocky Linux 8](#rocky-linux-8)
+    - [Oracle Linux 8](#oracle-linux-8)
   - [Windows boxes](#windows-boxes)
     - [Windows Server 2016 Standard](#windows-server-2016-standard)
     - [Windows Server 2019 Standard](#windows-server-2019-standard)
@@ -70,7 +71,7 @@ vagrant:vagrant
 
 |name|version|
 |----|-------|
-|almalinux8|8.5.0|
+|almalinux8|8.5.1|
 |almalinux8|8.4.0|
 |almalinux8|8.3.0|
 
@@ -79,6 +80,12 @@ vagrant:vagrant
 |name|version|
 |----|-------|
 |rockylinux8|8.5.0|
+
+### Oracle Linux 8
+
+|name|version|
+|----|-------|
+|oraclelinux8|8.5.0|
 
 ## Windows boxes
 
