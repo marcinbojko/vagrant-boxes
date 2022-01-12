@@ -1,0 +1,37 @@
+# Let's create machine name in style: 2 random letter,4 random numbers
+VM_NAMEALP = [*('A'..'Z')].sample(2).join.downcase
+VM_NUMBER= [*('1'..'9')].sample(4).join
+VM_NAME= "#{VM_NAMEALP}"+"#{VM_NUMBER}"
+VM_DOMAIN = "test.lan"
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "marcinbojko/ubuntu2004"
+# uncheck if you need stric version
+# config.vm.box.version="1.1.0"
+  config.vm.boot_timeout = 240
+  # Webmin
+  config.vm.network "forwarded_port", guest: 10000, host: 10000, host_ip: "127.0.0.1"
+  # Cocpkit
+  config.vm.network "forwarded_port", guest: 9090, host: 9090, host_ip: "127.0.0.1"
+  # ssh 
+  config.vm.provider :virtualbox do |vb, override|
+    vb.gui = true
+    vb.customize ["modifyvm", :id, "--memory", 2048]
+    vb.customize ["modifyvm", :id, "--cpus", 2]
+    vb.customize ["modifyvm", :id, "--vram", 32]
+    vb.customize ["setextradata", "global", "GUI/SuppressMessages", "all" ]
+    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    vb.customize ["modifyvm", :id, "--audio", "none"]
+    # Clipboard enabled
+    vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+    vb.customize ["modifyvm", :id, "--draganddrop", "hosttoguest"]
+    vb.name = "vagrant-#{VM_NAME}.#{VM_DOMAIN}"
+    # Performance gain
+    vb.linked_clone = true if Vagrant::VERSION >= '1.8.0'
+  end
+    config.vm.provision "shell", inline: <<-SHELL
+       echo "Provisioning done, rebooting..."
+     SHELL
+    config.vm.provision :shell, :path => "../scripts/linux/placeholder.sh"
+    config.vm.provision :reload
+end
