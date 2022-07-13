@@ -11,6 +11,8 @@
   - [Linux boxes](#linux-boxes)
     - [CentOS 7](#centos-7)
     - [Alma Linux 8](#alma-linux-8)
+    - [Alma Linux 9](#alma-linux-9)
+      - [Alma Linux 9 - arm64](#alma-linux-9---arm64)
     - [Rocky Linux 8](#rocky-linux-8)
     - [Oracle Linux 8](#oracle-linux-8)
     - [Ubuntu 20.04](#ubuntu-2004)
@@ -72,21 +74,30 @@ vagrant:vagrant
 
 |name|version|
 |----|-------|
+|almalinux8|8.5.2|
 |almalinux8|8.5.1|
 |almalinux8|8.4.0|
 |almalinux8|8.3.0|
+
+### Alma Linux 9
+
+#### Alma Linux 9 - arm64
+
+|name|version|
+|----|-------|
+|almalinux9-arm64|9.0.0|
 
 ### Rocky Linux 8
 
 |name|version|
 |----|-------|
-|rockylinux8|8.5.0|
+|rockylinux8|8.5.1|
 
 ### Oracle Linux 8
 
 |name|version|
 |----|-------|
-|oraclelinux8|8.5.0|
+|oraclelinux8|8.5.2|
 
 ### Ubuntu 20.04
 
