@@ -15,7 +15,8 @@
       - [Alma Linux 9 - arm64](#alma-linux-9---arm64)
     - [Rocky Linux 8](#rocky-linux-8)
     - [Oracle Linux 8](#oracle-linux-8)
-    - [Ubuntu 20.04](#ubuntu-2004)
+    - [Ubuntu 20.04 LTS Server](#ubuntu-2004-lts-server)
+    - [Ubuntu 22.04 LTS Server](#ubuntu-2204-lts-server)
   - [Windows boxes](#windows-boxes)
     - [Windows Server 2016 Standard](#windows-server-2016-standard)
     - [Windows Server 2019 Standard](#windows-server-2019-standard)
@@ -99,11 +100,17 @@ vagrant:vagrant
 |----|-------|
 |oraclelinux8|8.5.2|
 
-### Ubuntu 20.04
+### Ubuntu 20.04 LTS Server
 
 |name|version|
 |----|-------|
 |ubuntu2004|1.1.0|
+
+### Ubuntu 22.04 LTS Server
+
+|name|version|
+|----|-------|
+|ubuntu2204|1.1.0|
 
 ## Windows boxes
 
