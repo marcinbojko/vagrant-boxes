@@ -17,6 +17,7 @@
     - [Oracle Linux 8](#oracle-linux-8)
     - [Ubuntu 20.04 LTS Server](#ubuntu-2004-lts-server)
     - [Ubuntu 22.04 LTS Server](#ubuntu-2204-lts-server)
+      - [Ubuntu 22.04 LTS Server - arm64](#ubuntu-2204-lts-server---arm64)
   - [Windows boxes](#windows-boxes)
     - [Windows Server 2016 Standard](#windows-server-2016-standard)
     - [Windows Server 2019 Standard](#windows-server-2019-standard)
@@ -111,6 +112,12 @@ vagrant:vagrant
 |name|version|
 |----|-------|
 |ubuntu2204|1.1.0|
+
+#### Ubuntu 22.04 LTS Server - arm64
+
+|name|version|
+|----|-------|
+|ubuntu2204_arm64|1.0.0|
 
 ## Windows boxes
 
