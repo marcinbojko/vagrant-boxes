@@ -1,0 +1,22 @@
+# Let's create machine name in style: 2 random letter,4 random numbers
+VM_NAMEALP = [*('A'..'Z')].sample(2).join.downcase
+VM_NUMBER= [*('1'..'9')].sample(4).join
+VM_NAME= "#{VM_NAMEALP}"+"#{VM_NUMBER}"
+VM_DOMAIN = "test.lan"
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "marcinbojko/rockylinux9_arm64"
+  config.vm.boot_timeout = 240
+  # Webmin
+  config.vm.network "forwarded_port", guest: 10000, host: 10000, host_ip: "127.0.0.1"
+  # Cocpkit
+  config.vm.network "forwarded_port", guest: 9090, host: 9090, host_ip: "127.0.0.1"
+  config.vm.provision "shell", inline: <<-SHELL
+    /bin/rm -f /etc/ssh/*key*
+    hostnamectl set-hostname vagrant-#{VM_NAME}.#{VM_DOMAIN}
+    ip addr sh
+    echo "Provisioning done, rebooting..."
+  SHELL
+  config.vm.provision :shell, :path => "../scripts/linux/placeholder.sh"
+  config.vm.provision :reload
+end

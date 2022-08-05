@@ -14,6 +14,8 @@
     - [Alma Linux 9](#alma-linux-9)
       - [Alma Linux 9 - arm64](#alma-linux-9---arm64)
     - [Rocky Linux 8](#rocky-linux-8)
+    - [Rocky Linux 9](#rocky-linux-9)
+      - [Rocky Linux 9 - arm64](#rocky-linux-9---arm64)
     - [Oracle Linux 8](#oracle-linux-8)
     - [Ubuntu 20.04 LTS Server](#ubuntu-2004-lts-server)
     - [Ubuntu 22.04 LTS Server](#ubuntu-2204-lts-server)
@@ -94,6 +96,18 @@ vagrant:vagrant
 |name|version|
 |----|-------|
 |rockylinux8|8.5.1|
+
+### Rocky Linux 9
+
+|name|version|
+|----|-------|
+|rockylinux9|9.0.0|
+
+#### Rocky Linux 9 - arm64
+
+|name|version|
+|----|-------|
+|rockylinux9-arm64|9.0.0|
 
 ### Oracle Linux 8
 
