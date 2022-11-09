@@ -15,8 +15,11 @@
       - [Alma Linux 9 - arm64](#alma-linux-9---arm64)
     - [Rocky Linux 8](#rocky-linux-8)
     - [Rocky Linux 9](#rocky-linux-9)
+      - [Rocky Linux 9 - amd64](#rocky-linux-9---amd64)
       - [Rocky Linux 9 - arm64](#rocky-linux-9---arm64)
     - [Oracle Linux 8](#oracle-linux-8)
+    - [Oracle Linux 9](#oracle-linux-9)
+      - [Oracle Linux 9 - arm64](#oracle-linux-9---arm64)
     - [Ubuntu 20.04 LTS Server](#ubuntu-2004-lts-server)
     - [Ubuntu 22.04 LTS Server](#ubuntu-2204-lts-server)
       - [Ubuntu 22.04 LTS Server - arm64](#ubuntu-2204-lts-server---arm64)
@@ -43,6 +46,7 @@ vagrant plugin install vagrant-reload
 
 - Virtualbox
 - Hyper-V (2016/2019)
+- Parallels Desktop (ARM64 Based Machines)
 
 ## Default credentials
 
@@ -79,9 +83,6 @@ vagrant:vagrant
 |name|version|
 |----|-------|
 |almalinux8|8.5.2|
-|almalinux8|8.5.1|
-|almalinux8|8.4.0|
-|almalinux8|8.3.0|
 
 ### Alma Linux 9
 
@@ -89,7 +90,7 @@ vagrant:vagrant
 
 |name|version|
 |----|-------|
-|almalinux9-arm64|9.0.0|
+|almalinux9-arm64|9.0.1|
 
 ### Rocky Linux 8
 
@@ -99,6 +100,8 @@ vagrant:vagrant
 
 ### Rocky Linux 9
 
+#### Rocky Linux 9 - amd64
+
 |name|version|
 |----|-------|
 |rockylinux9|9.0.0|
@@ -107,13 +110,21 @@ vagrant:vagrant
 
 |name|version|
 |----|-------|
-|rockylinux9-arm64|9.0.0|
+|rockylinux9-arm64|9.0.1|
 
 ### Oracle Linux 8
 
 |name|version|
 |----|-------|
 |oraclelinux8|8.5.2|
+
+### Oracle Linux 9
+
+#### Oracle Linux 9 - arm64
+
+|name|version|
+|----|-------|
+|oraclelinux9-arm64|9.0.1|
 
 ### Ubuntu 20.04 LTS Server
 
@@ -131,7 +142,7 @@ vagrant:vagrant
 
 |name|version|
 |----|-------|
-|ubuntu2204_arm64|1.0.0|
+|ubuntu2204_arm64|22.04.20221108|
 
 ## Windows boxes
 
