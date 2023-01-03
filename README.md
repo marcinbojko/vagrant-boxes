@@ -110,7 +110,7 @@ vagrant:vagrant
 
 |name|version|
 |----|-------|
-|rockylinux9-arm64|9.0.1|
+|rockylinux9-arm64|9.1.0|
 
 ### Oracle Linux 8
 
