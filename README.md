@@ -110,7 +110,7 @@ vagrant:vagrant
 
 |name|version|
 |----|-------|
-|rockylinux9-arm64|9.1.0|
+|rockylinux9-arm64|9.1.1|
 
 ### Oracle Linux 8
 
@@ -124,7 +124,7 @@ vagrant:vagrant
 
 |name|version|
 |----|-------|
-|oraclelinux9-arm64|9.0.1|
+|oraclelinux9-arm64|9.1.0|
 
 ### Ubuntu 20.04 LTS Server
 
